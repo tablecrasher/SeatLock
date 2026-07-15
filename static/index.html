@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cinema Booking</title>
+    <title>SeatLock</title>
     <style>
       :root {
         --bg: #0f0f0f;
@@ -47,8 +47,9 @@
       }
 
       header {
+        position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         margin-bottom: 2rem;
         padding-bottom: 1rem;
@@ -62,6 +63,8 @@
       }
 
       .user-id {
+        position: absolute;
+        right: 0;
         font-size: 0.75rem;
         color: var(--text-muted);
         background: var(--surface);
@@ -316,7 +319,7 @@
   </head>
   <body>
     <header>
-      <h1>Cinema Booking</h1>
+      <h1>SeatLock</h1>
       <div class="user-id" id="userBadge"></div>
     </header>
 
