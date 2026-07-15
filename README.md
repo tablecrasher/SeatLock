@@ -8,17 +8,21 @@ A cinema booking system written in Go that lets multiple users book tickets conc
 ## Problem Statement
 How do we build a fast booking system that prevents double-bookings?
 
+
 **Strategy 1: Synchronous Approach**
 - Users buy tickets in first-come-first-served order at a register.
 - This prevents double-booking but is slow, since every purchase blocks the next.
+
 
 **Strategy 2: Optimistic Concurrency**
 - Sell seats online with no lock while a purchase is in progress.
 - Although this is faster, two users can end up racing for the same seat — one of them enters their card details only to find the seat was taken.
 
+
 **Strategy 3: Pessimistic Locking**
 - Sell seats online, but when a user starts checkout they're given a short-lived lock on the seat.
 - This is the best of both worlds: it's fast, and no one wastes time entering payment details for a seat someone else just took.
+
 
 SeatLock implements Strategy 3, using Redis as the lock store.
 
