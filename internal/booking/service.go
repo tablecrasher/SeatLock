@@ -4,11 +4,11 @@ type Service struct {
 	store BookingStore
 }
 
-func NewService(store *RedisStore) *Service {
+func NewService(store BookingStore) *Service {
 	return &Service{store}
 }
 
-func (s *Service) Book(b Booking) error {
+func (s *Service) Book(b Booking) (Booking, error) {
 	return s.store.Book(b)
 }
 
