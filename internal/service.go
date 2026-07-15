@@ -4,7 +4,7 @@ type Service struct {
 	store BookingStore
 }
 
-func NewService(store BookingStore) *Service {
+func NewService(store *RedisStore) *Service {
 	return &Service{store}
 }
 
