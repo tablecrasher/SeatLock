@@ -1,6 +1,8 @@
 # SeatLock
 ## SeatLock is a cinema booking system written in Go that allows multiple buyers to book tickets concurrently. 
 ## Install & run
+## Problem
+
 
 Requires Go 1.24+ and Docker.
 
